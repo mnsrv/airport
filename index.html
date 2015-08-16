@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Airport Table</title>
+    <meta charset="utf-8">
+    <link rel="shortcut icon" href="/images/favicon.png">
+    <link rel="stylesheet" href="airport.css">
+</head>
+<body>
+    <div class="container">
+        <div class="height-fix"></div>
+        <label class="filter-label" for="in">Прилет:</label><input type="checkbox" class="filter" id="in" checked>
+        <label class="filter-label" for="out">Вылет:</label><input type="checkbox" class="filter" id="out" checked>
+        <table class="airport-table" cellspacing="0">
+            <thead class="airport-table__head" id="table-head">
+                <tr>
+                    <th><div class="th-inner">Тип рейса</div></th>
+                    <th class="airline"><div class="th-inner">Авиакомпания</div></th>
+                    <th><div class="th-inner">Номер рейса</div></th>
+                    <th class="aircraft"><div class="th-inner">Тип воздушного судна</div></th>
+                    <th><div class="th-inner">Место назначения</div></th>
+                    <th><div class="th-inner">Время по расписанию</div></th>
+                    <th><div class="th-inner">Статус рейса</div></th>
+                    <th class="note"><div class="th-inner">Примечание</div></th>
+                </tr>
+                <tr class="hidden-header">
+                    <th><div class="th-inner">Тип рейса</div></th>
+                    <th class="airline"><div class="th-inner">Авиакомпания</div></th>
+                    <th><div class="th-inner">Номер рейса</div></th>
+                    <th class="aircraft"><div class="th-inner">Тип воздушного судна</div></th>
+                    <th><div class="th-inner">Место назначения</div></th>
+                    <th><div class="th-inner">Время по расписанию</div></th>
+                    <th><div class="th-inner">Статус рейса</div></th>
+                    <th class="note"><div class="th-inner">Примечание</div></th>
+                </tr>
+            </thead>
+            <tbody class="airport-table__body">
+                <tr class="in">
+                    <td><a href="#popup" class="href">Прилет</a></td>
+                    <td class="airline"><a href="#popup" class="href"><img src="images/aeroflot_200.png" alt="Аэрофлот"><span class="airline-name">Аэрофлот</span></a></td>
+                    <td><a href="#popup" class="href">261</a></td>
+                    <td class="aircraft"><a href="#popup" class="href">А-330-300</a></td>
+                    <td><a href="#popup" class="href">Токио<span class="airport"> (Нарита)</span></a></td>
+                    <td><a href="#popup" class="href">15:49</a></td>
+                    <td><a href="#popup" class="href">Приземлился</a></td>
+                    <td class="note"><a href="#popup" class="href">-</a></td>
+                </tr>
+                <tr class="in">
+                    <td><a href="#popup2" class="href">Прилет</a></td>
+                    <td class="airline"><a href="#popup2" class="href"><img src="images/bulgariaair_200.png" alt="Болгария Эйр"><span class="airline-name">Болгария Эйр</span></a></td>
+                    <td><a href="#popup2" class="href">763</a></td>
+                    <td class="aircraft"><a href="#popup2" class="href">А-320</a></td>
+                    <td><a href="#popup2" class="href">Варна<span class="airport"> (Варна)</span></a></td>
+                    <td><a href="#popup2" class="href">16:15</a></td>
+                    <td><a href="#popup2" class="href">Приземляется</a></td>
+                    <td class="note"><a href="#popup2" class="href">-</a></td>
+                </tr>
+                <tr class="out">
+                    <td class="flight-type"><a href="#popup3" class="href">Вылет</a></td>
+                    <td class="airline"><a href="#popup3" class="href"><img src="images/alitalia_200.png" alt="Алиталия"><span class="airline-name">Алиталия</span></a></td>
+                    <td><a href="#popup3" class="href">3778</a></td>
+                    <td class="aircraft"><a href="#popup3" class="href">Сухой Суперджет 100-90</a></td>
+                    <td><a href="#popup3" class="href">Владивосток<span class="airport"> (Кневичи)</span></a></td>
+                    <td><a href="#popup3" class="href">16:45</a></td>
+                    <td><a href="#popup3" class="href">Ожидание посадки</a></td>
+                    <td class="note"><a href="#popup3" class="href">-</a></td>
+                </tr>
+                <tr class="in">
+                    <td class="flight-type"><a href="#popup4" class="href">Прилет</a></td>
+                    <td class="airline"><a href="#popup4" class="href"><img src="images/koreanair_200.png" alt="Кореан Эйр"><span class="airline-name">Кореан Эйр</span></a></td>
+                    <td><a href="#popup4" class="href">5923</a></td>
+                    <td class="aircraft"><a href="#popup4" class="href">А-320</a></td>
+                    <td><a href="#popup4" class="href">Сеул<span class="airport"> (Инчеон)</span></a></td>
+                    <td><a href="#popup4" class="href">17:05</a></td>
+                    <td><a href="#popup4" class="href">Задерживается до 18:00</a></td>
+                    <td class="note"><a href="#popup4" class="href">-</a></td>
+                </tr>
+                <tr class="out">
+                    <td class="flight-type"><a href="#popup5" class="href">Вылет</a></td>
+                    <td class="airline"><a href="#popup5" class="href"><img src="images/airfrance_200.png" alt="Эйр Франс"><span class="airline-name">Эйр Франс</span></a></td>
+                    <td><a href="#popup5" class="href">4426</a></td>
+                    <td class="aircraft"><a href="#popup5" class="href">А-321</a></td>
+                    <td><a href="#popup5" class="href">Париж<span class="airport"> (Шарль Де Голь)</span></a></td>
+                    <td><a href="#popup5" class="href">16:20</a></td>
+                    <td><a href="#popup5" class="href">Регистрация</a></td>
+                    <td class="note"><a href="#popup5" class="href">-</a></td>
+                </tr><tr class="in">
+                    <td><a href="#popup" class="href">Прилет</a></td>
+                    <td class="airline"><a href="#popup" class="href"><img src="images/aeroflot_200.png" alt="Аэрофлот"><span class="airline-name">Аэрофлот</span></a></td>
+                    <td><a href="#popup" class="href">261</a></td>
+                    <td class="aircraft"><a href="#popup" class="href">А-330-300</a></td>
+                    <td><a href="#popup" class="href">Токио<span class="airport"> (Нарита)</span></a></td>
+                    <td><a href="#popup" class="href">15:49</a></td>
+                    <td><a href="#popup" class="href">Приземлился</a></td>
+                    <td class="note"><a href="#popup" class="href">-</a></td>
+                </tr>
+                <tr class="in">
+                    <td><a href="#popup2" class="href">Прилет</a></td>
+                    <td class="airline"><a href="#popup2" class="href"><img src="images/bulgariaair_200.png" alt="Болгария Эйр"><span class="airline-name">Болгария Эйр</span></a></td>
+                    <td><a href="#popup2" class="href">763</a></td>
+                    <td class="aircraft"><a href="#popup2" class="href">А-320</a></td>
+                    <td><a href="#popup2" class="href">Варна<span class="airport"> (Варна)</span></a></td>
+                    <td><a href="#popup2" class="href">16:15</a></td>
+                    <td><a href="#popup2" class="href">Приземляется</a></td>
+                    <td class="note"><a href="#popup2" class="href">-</a></td>
+                </tr>
+                <tr class="out">
+                    <td class="flight-type"><a href="#popup3" class="href">Вылет</a></td>
+                    <td class="airline"><a href="#popup3" class="href"><img src="images/alitalia_200.png" alt="Алиталия"><span class="airline-name">Алиталия</span></a></td>
+                    <td><a href="#popup3" class="href">3778</a></td>
+                    <td class="aircraft"><a href="#popup3" class="href">Сухой Суперджет 100-90</a></td>
+                    <td><a href="#popup3" class="href">Владивосток<span class="airport"> (Кневичи)</span></a></td>
+                    <td><a href="#popup3" class="href">16:45</a></td>
+                    <td><a href="#popup3" class="href">Ожидание посадки</a></td>
+                    <td class="note"><a href="#popup3" class="href">-</a></td>
+                </tr>
+                <tr class="in">
+                    <td class="flight-type"><a href="#popup4" class="href">Прилет</a></td>
+                    <td class="airline"><a href="#popup4" class="href"><img src="images/koreanair_200.png" alt="Кореан Эйр"><span class="airline-name">Кореан Эйр</span></a></td>
+                    <td><a href="#popup4" class="href">5923</a></td>
+                    <td class="aircraft"><a href="#popup4" class="href">А-320</a></td>
+                    <td><a href="#popup4" class="href">Сеул<span class="airport"> (Инчеон)</span></a></td>
+                    <td><a href="#popup4" class="href">17:05</a></td>
+                    <td><a href="#popup4" class="href">Задерживается до 18:00</a></td>
+                    <td class="note"><a href="#popup4" class="href">-</a></td>
+                </tr>
+                <tr class="out">
+                    <td class="flight-type"><a href="#popup5" class="href">Вылет</a></td>
+                    <td class="airline"><a href="#popup5" class="href"><img src="images/airfrance_200.png" alt="Эйр Франс"><span class="airline-name">Эйр Франс</span></a></td>
+                    <td><a href="#popup5" class="href">4426</a></td>
+                    <td class="aircraft"><a href="#popup5" class="href">А-321</a></td>
+                    <td><a href="#popup5" class="href">Париж<span class="airport"> (Шарль Де Голь)</span></a></td>
+                    <td><a href="#popup5" class="href">16:20</a></td>
+                    <td><a href="#popup5" class="href">Регистрация</a></td>
+                    <td class="note"><a href="#popup5" class="href">-</a></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="popups">
+        <div class="popup" id="popup">
+            <div class="popup-container">
+                <a href="#" class="popup-close">X</a>
+                <div>Рейс 261</div>
+                <div><img src="images/aeroflot_200.png" alt="Аэрофлот"></div>
+                <div>Тип рейса: Прилет</div>
+                <div>Авиакомпания: Аэрофлот</div>
+                <div>Тип воздушного судна: А-330-300</div>
+                <div>Место назначения: Токио (Нарита)</div>
+                <div>Время по расписанию: 15:49</div>
+                <div>Статус рейса: приземлился</div>
+                <div>Примечание: -</div>
+            </div>
+        </div>
+        <div class="popup" id="popup2">
+            <div class="popup-container">
+                <a href="#" class="popup-close">X</a>
+                <div>Рейс 763</div>
+                <div><img src="images/bulgariaair_200.png" alt="Болгария Эйр"></div>
+                <div>Тип рейса: Прилет</div>
+                <div>Авиакомпания: Болгария Эйр</div>
+                <div>Тип воздушного судна: А-320</div>
+                <div>Место назначения: Варна (Варна)</div>
+                <div>Время по расписанию: 16:15</div>
+                <div>Статус рейса: приземляется</div>
+                <div>Примечание: -</div>
+            </div>
+        </div>
+        <div class="popup" id="popup3">
+            <div class="popup-container">
+                <a href="#" class="popup-close">X</a>
+                <div>Рейс 3778</div>
+                <div><img src="images/alitalia_200.png" alt="Алиталия"></div>
+                <div>Тип рейса: Вылет</div>
+                <div>Авиакомпания: Алиталия</div>
+                <div>Тип воздушного судна: Сухой Суперджет 100-90</div>
+                <div>Место назначения: Владивосток (Кневичи)</div>
+                <div>Время по расписанию: 16:45</div>
+                <div>Статус рейса: Ожидание посадки</div>
+                <div>Примечание: -</div>
+            </div>
+        </div>
+        <div class="popup" id="popup4">
+            <div class="popup-container">
+                <a href="#" class="popup-close">X</a>
+                <div>Рейс 5923</div>
+                <div><img src="images/koreanair_200.png" alt="Кореан Эйр"></div>
+                <div>Тип рейса: Прилет</div>
+                <div>Авиакомпания: Кореан Эйр</div>
+                <div>Тип воздушного судна: А-320</div>
+                <div>Место назначения: Сеул (Инчеон)</div>
+                <div>Время по расписанию: 17:05</div>
+                <div>Статус рейса: Задерживается до 18:00</div>
+                <div>Примечание: -</div>
+            </div>
+        </div>
+        <div class="popup" id="popup5">
+            <div class="popup-container">
+                <a href="#" class="popup-close">X</a>
+                <div></div>
+                <div>Рейс 4426</div>
+                <div><img src="images/airfrance_200.png" alt=""></div>
+                <div>Тип рейса: Вылет</div>
+                <div>Авиакомпания: Эйр Франс</div>
+                <div>Тип воздушного судна: А-321</div>
+                <div>Место назначения: Париж (Шарль Де Голь)</div>
+                <div>Время по расписанию: 16:20</div>
+                <div>Статус рейса: Регистрация</div>
+                <div>Примечание: -</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
