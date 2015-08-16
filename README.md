@@ -1,4 +1,4 @@
-# airport
+# Airport table
 Airport table CSS only for Yandex SHRI
 
 ## Demo
